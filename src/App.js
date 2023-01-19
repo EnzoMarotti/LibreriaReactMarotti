@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import Home from './pages/home/Home';
-import Detail from './pages/detail/Detail';
 import './App.css';
+import ItemListContainer from './components/itemListContainer/itemListContainer'
+import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer'
+
+
 import NavBar from './components/NavBar'
-// import ItemListContainer from './components/ItemListContainer';
+
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <NavBar></NavBar>
       <Routes>
         <Route path="*" element ={<div>Ocurrio un error</div>} />  
-     <Route path="/" element={<Home/>}  />
-     <Route path="detail" element={<Detail/>} />
+        <Route path="/" element={<ItemListContainer/>}  />
+        <Route path="/categoria/:categoria" element={<ItemListContainer/>} />
+        <Route path="/Item/:id" element={<ItemDetailContainer/>} />
       </Routes>
     </BrowserRouter>
   );

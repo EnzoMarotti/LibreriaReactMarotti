@@ -1,0 +1,40 @@
+.ItemRow {
+    display: flex;
+    background-color: #0b0b0b;
+    text-align: center;
+    justify-content: center;
+}
+
+.Item {
+    display: flex;
+    gap: 1rem;
+margin: 2%;
+color: black;
+
+}
+
+.Item img {
+    width: 12rem;
+    height: 17rem;
+    object-fit: contain;
+}
+
+.Item li {
+text-decoration: none;
+list-style-type: none;
+}
+
+
+.card-text img{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.card-body{
+    width: 300px;
+height: 300px;}
+
+.card-title {
+    color: white;
+    font-size: 1.4rem;
+}
