@@ -1,12 +1,21 @@
+import './contador.css'
 import { useState } from "react";
 
+
 const ItemCount = () => {
+
+  // Mensaje que nos indica cuantas unidades se compraron en el botón de Agregar al carrito.
+  const onAdd = (quantity) =>{
+    console.log (`compraste ${quantity} unidades`)
+  }
+
   //UseState para poder modificar el contador.  
   const [contador,setContador] = useState (0);
 
-  //Para sumar:
+  //Stock hardcodeado
   const StockTotal = 10;
 
+    //Para sumar:
   const Sumar = () => {
       if( contador < StockTotal)
       setContador( contador +1);
@@ -20,12 +29,12 @@ const ItemCount = () => {
   
     return (
     <div>
-        <div>
-                <button onClick={Restar}>-</button>
+        <div className='contador_div'>
+                <button className='boton' onClick={Restar}>-</button>
                 <span>{'  ' +contador+'  '}</span>
-                <button onClick={Sumar}>+</button>
+                <button className='boton' onClick={Sumar}>+</button>
             </div>
-                <button>Agregar al carrito</button>
+                <button className='carrito' onClick={() => onAdd (contador)}>Agregar al carrito</button>
     </div>
   )
 }

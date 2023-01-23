@@ -4,7 +4,8 @@ import ItemList from '../itemList/itemList';
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
-    const[products, setProducts]= useState([])
+  //Use state para guardar la data que va a ser mandado a "itemlist"  
+  const[products, setProducts]= useState([])
 
     const {categoria} = useParams();
     useEffect(() => {
@@ -23,3 +24,5 @@ const ItemListContainer = () => {
 }
 
 export default ItemListContainer
+
+//dentro del return se manda la data que sale del State [] al "ItemList.js"

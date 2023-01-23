@@ -5,4 +5,5 @@
         justify-content: space-around;
         margin-top: 10rem;
         gap: 1rem;
+        list-style:none;
     }

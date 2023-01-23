@@ -23,9 +23,3 @@ function App() {
 
 export default App;
 
-      /* <ItemListContainer greeting="Bienvenido a TragoAmargo" /> */
-
-
-
-
-      //Hacer pagina "Route" de error. e importarlo al Route.

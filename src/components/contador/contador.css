@@ -1,0 +1,43 @@
+.contador_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton{
+    background-color: black; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 10px;
+    margin: 8px;
+}
+
+.boton:hover {
+    background-color: #4CAF50 ;
+}
+
+.contador_div span {
+    font-size: 16px;
+    margin: 8px;
+    font-weight: 500;
+
+}
+
+.carrito {
+    background-color:black; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.carrito:hover {
+    background-color: #4CAF50;
+}

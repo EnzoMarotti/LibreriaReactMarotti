@@ -7,6 +7,8 @@ const ItemDetailContainer = () => {
     const[products, setProducts]= useState({})
     const {id} = useParams()
     console.log()
+   
+
     useEffect(() =>{
         getProducts
         .then((resp)=> setProducts(resp.find(item => item.id === parseInt(id))))

@@ -16,7 +16,7 @@ const ItemDetail = ({products}) => {
             <ItemCount/>
           </Card.Body>
         </Card>
-            </div>
+    </div>
   )
 }
 

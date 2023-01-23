@@ -1,26 +1,29 @@
 import {Link} from "react-router-dom"
 import Contador from "../contador/ItemCount"
 import './item.css'
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+
 
 
 const Item = ({producto}) => {
   return (
-    <div className='ItemRow'>
-    <Card style={{ width: '25rem' }} className="Item">
-<Card.Body>
-    <Card.Title>{producto.name} </Card.Title>
-    <Card.Text>
-        <img src={producto.img} alt="Producto"/>
-        <p>Precio: {producto.precio} AR$ Stock: {producto.stock}</p>
-        <Link to={`/item/${producto.id}`} >
-            <Button variant="primary">Ver Más</Button>
-        </Link>
-    </Card.Text>
-    <Contador producto={producto}/>
-</Card.Body>
-</Card>
+
+   
+
+
+    <div className='Item'>
+      <div className="Card">
+          <div className="CardBody">
+              <h2 className="Card.title">{producto.name} </h2>
+           <div className="Card_content">
+              <img src={producto.img} alt="Producto"/>
+              <p className="Card_p">Precio: {producto.precio} AR$ Stock: {producto.stock}</p>
+              <Link to={`/item/${producto.id}`} >
+              <button className="Button">Ver Más</button>
+               </Link>
+                      <Contador producto={producto} />
+             </div >
+           </div>
+        </div>
     </div>
   )
 }
