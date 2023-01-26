@@ -1,16 +1,28 @@
-.ItemRow {
-    display: flex;
-    background-color: #282c34;
-    text-align: center;
-    justify-content: center;
-}
-
-.Item {
-    display: flex;
-    gap: 1rem;
-}
-
-.Item li {
-text-decoration: none;
-list-style-type: none;
-}
+.ItemDetail {
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 2rem;
+    box-shadow: 2px 2px 5px #ccc;
+  }
+  
+  .ItemDetail .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .ItemDetail .description {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ItemDetail .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .ItemDetail .stock {
+    font-size: 1.2rem;
+  }

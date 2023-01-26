@@ -1,4 +1,4 @@
-import getProducts from '../productos/productos';
+  import getProducts from '../productos/productos';
 import { useEffect, useState } from 'react';
 import ItemList from '../itemList/itemList';
 import { useParams } from "react-router-dom";
@@ -14,7 +14,7 @@ const ItemListContainer = () => {
       } else {
           getProducts.then(res => setProducts(res))
       }
-  })
+  }, [categoria])
 
   return (
     <div>

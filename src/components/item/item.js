@@ -6,10 +6,6 @@ import './item.css'
 
 const Item = ({producto}) => {
   return (
-
-   
-
-
     <div className='Item'>
       <div className="Card">
           <div className="CardBody">

@@ -3,20 +3,17 @@ import Card from 'react-bootstrap/Card'
 import './itemDetail.css'
 
 
+
+
 const ItemDetail = ({products}) => {
   return (
-    <div className='ItemRow'>
-        <Card  className="Item">
-          <Card.Body>
-            <Card.Title><span>{products.name}</span> </Card.Title>
-              <Card.Text>
-                  <p>Precio: {products.precio} AR$</p>
-                  <p>Stock: {products.stock}</p>
-              </Card.Text>
-            <ItemCount/>
-          </Card.Body>
-        </Card>
-    </div>
+    <div className='ItemDetail'>
+    <div className="title">{products.name}</div>
+    <div className="description">{products.description}</div>
+    <div className="price">Precio: {products.precio} AR$</div>
+    <div className="stock">Stock: {products.stock}</div>
+    <ItemCount/>
+</div>
   )
 }
 

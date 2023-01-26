@@ -1,16 +1,17 @@
 import './NavBar.css'
 import Cart from './CartWidget'
 import { Nav } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
  const NavBar = () => {
   return (
     <>
     <header className="header">
-        <p className='logo'>Trago Amargo</p>
+        <NavLink className='logo'  to="/" >Trago Amargo</NavLink>
         
 
         <nav className='navbar'>
-            <a href="/">Home</a>
+            <NavLink to="/">Home</NavLink>
             <a href="#SobreNosotros">Sobre nosotros</a>
            <Nav.Link href="/categoria/Cervezas">  Cervezas </Nav.Link>
            <Nav.Link href="/categoria/Gin">  Gin </Nav.Link>
@@ -23,4 +24,4 @@ import { Nav } from 'react-bootstrap';
   )
 }
 
-export default NavBar;
+export default NavBar; 
