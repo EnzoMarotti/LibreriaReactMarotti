@@ -1,28 +1,47 @@
 .ItemDetail {
+    display: flex;
     padding: 2rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-top: 2rem;
+    margin-top: 8rem;
     box-shadow: 2px 2px 5px #ccc;
+    width: 80%;
+    
   }
+
+.Row-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-left: 2.5rem;
+  justify-content:space-around;
+}
   
   .ItemDetail .title {
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+
+  .ItemDetail .img {
+    max-width: 700px;
+    max-height: 700px;
+    border-radius: 5%;
   }
   
   .ItemDetail .description {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
   
   .ItemDetail .price {
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
   }
   
   .ItemDetail .stock {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }

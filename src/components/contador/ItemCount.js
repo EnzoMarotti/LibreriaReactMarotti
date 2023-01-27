@@ -29,12 +29,14 @@ const ItemCount = () => {
   
     return (
     <div>
+      <div className='Contador-total'>
         <div className='contador_div'>
                 <button className='boton' onClick={Restar}>-</button>
                 <span>{'  ' +contador+'  '}</span>
                 <button className='boton' onClick={Sumar}>+</button>
             </div>
                 <button className='carrito' onClick={() => onAdd (contador)}>Agregar al carrito</button>
+      </div>
     </div>
   )
 }
