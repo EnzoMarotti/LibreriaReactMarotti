@@ -1,7 +1,7 @@
 import './NavBar.css'
 import Cart from './CartWidget'
 import { Nav } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
  const NavBar = () => {
   return (
@@ -13,12 +13,12 @@ import { NavLink } from 'react-router-dom';
         <nav className='navbar'>
             <NavLink to="/">Home</NavLink>
             <a href="#SobreNosotros">Sobre nosotros</a>
-           <Nav.Link href="/categoria/Cervezas">  Cervezas </Nav.Link>
-           <Nav.Link href="/categoria/Gin">  Gin </Nav.Link>
+           <NavLink to="/categoria/Cervezas">  Cervezas </NavLink>
+           <NavLink to="/categoria/Gin">  Gin </NavLink>
             <a href="#contactanos">Contáctanos</a> 
         </nav>
 
-        <a href="Carrito"><Cart valor='0'></Cart>Carrito</a>
+        <Link to="/cart"><Cart valor='0'></Cart>Carrito</Link>
     </header>
     </>
   )

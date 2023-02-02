@@ -10,15 +10,23 @@ const CartProvider = ( {children }) => {
  const [cart, SetCart] = useState ([]);
 
 //Función agregar al carrito.
-const addProduct = (item, newQuantity) => {
-    const newCart = cart.filter(prod => prod.id !== item.id);
-    newCart.push ({...item, quantity: newQuantity});
-    SetCart(newCart);
+const addProduct = (Product, newContador) => {
+    let newCart;
+    let product = cart.find (product => product.id === Product.id);
+    if (product){
+        product.Contador += newContador;
+        newCart = [...cart];
+    } else {
+        product = {...Product, Contador: newContador};
+        newCart = [...cart, product];
+    }
+    SetCart (newCart);
 }
 
+console.log ('carrito', cart);
 
 //Función para limpiar el carrito:
-const ClearCart = () => SetCart ([]);
+const clearCart = () => SetCart ([]);
 
 //Función find para saber si un producto está en el carrito.
 const isInCart = (id) => {
@@ -30,10 +38,10 @@ const removeProduct = (id) => SetCart(cart.filter(Products => Products.id !== id
 
  return (
     <CartContext.Provider value= {{
-        ClearCart,
+        clearCart,
         isInCart,
         removeProduct,
-        addProduct
+        addProduct,
     }}>
         {children}
     </CartContext.Provider>

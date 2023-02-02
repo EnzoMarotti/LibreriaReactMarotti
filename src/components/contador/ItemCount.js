@@ -2,7 +2,7 @@ import './contador.css'
 import { useState } from "react";
 
 
-const ItemCount = ({onAdd}) => {
+const ItemCount = ({onAdd, addProduct}) => {
 
   // Mensaje que nos indica cuantas unidades se compraron en el botón de Agregar al carrito.
 
@@ -32,7 +32,7 @@ const ItemCount = ({onAdd}) => {
                 <span>{'  ' +contador+'  '}</span>
                 <button className='boton' onClick={Sumar}>+</button>
             </div>
-                <button className='carrito' onClick={() => onAdd (contador)}>Agregar al carrito</button>
+                <button className='carrito' onClick={() => onAdd(contador, addProduct)}>Agregar al carrito</button>
       </div>
     </div>
   )

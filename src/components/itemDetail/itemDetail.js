@@ -1,20 +1,22 @@
 import ItemCount from "../contador/ItemCount"
 import './itemDetail.css'
 import { useState } from "react"
-// import { useCartContext } from "../../context/CartContext"
+import { useCartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
+
 
 // import Item from "../item/item"
 
 
-const ItemDetail = ({products}) => {
+const ItemDetail = ({products, Contador}) => {
   //Go to cart que se va a activar al presional el botón.
   const [goToCart, setGoToCart] = useState (false);
-  // const {addProduct} = useCartContext
+  const {addProduct} = useCartContext ();
 
 
 const onAdd = (Contador) => {
-  setGoToCart (true);
+  setGoToCart (true); 
+  addProduct (products, Contador)
 };
 
   return (
@@ -34,7 +36,7 @@ const onAdd = (Contador) => {
             {
             goToCart 
             ? <Link to="/cart">Terminar Compra</Link>
-            :     <ItemCount onAdd= {onAdd}/>
+            :     <ItemCount onAdd= {onAdd} />
             }
         </div>
       </div>
@@ -45,4 +47,4 @@ const onAdd = (Contador) => {
 export default ItemDetail
 
 
-//Cambie el import de contador por ItemCount.
+//Agregúe el link que te lleva a "terminar compra" que lleva a /cart.
