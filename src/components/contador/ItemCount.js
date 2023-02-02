@@ -2,12 +2,9 @@ import './contador.css'
 import { useState } from "react";
 
 
-const ItemCount = () => {
+const ItemCount = ({onAdd}) => {
 
   // Mensaje que nos indica cuantas unidades se compraron en el botón de Agregar al carrito.
-  const onAdd = (quantity) =>{
-    console.log (`compraste ${quantity} unidades`)
-  }
 
   //UseState para poder modificar el contador.  
   const [contador,setContador] = useState (0);
