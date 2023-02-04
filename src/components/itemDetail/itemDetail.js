@@ -8,12 +8,12 @@ import { Link } from "react-router-dom"
 // import Item from "../item/item"
 
 
-const ItemDetail = ({products, Contador}) => {
+const ItemDetail = ({products}) => {
   //Go to cart que se va a activar al presional el botón.
   const [goToCart, setGoToCart] = useState (false);
   const {addProduct} = useCartContext ();
 
-
+//Función que va a generar el link que nos lleva al cart y además trae el contexto de añadir productos.
 const onAdd = (Contador) => {
   setGoToCart (true); 
   addProduct (products, Contador)
@@ -48,3 +48,4 @@ export default ItemDetail
 
 
 //Agregúe el link que te lleva a "terminar compra" que lleva a /cart.
+//Falta poder hacer que al cambiar de url o refrescar la pagina no se resetee el array de "Cart"
