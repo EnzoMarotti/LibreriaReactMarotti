@@ -38,8 +38,8 @@ const removeProduct = (id) => SetCart(cart.filter(Products => Products.id !== id
 
 //Función para ver los productos en el carrito.
 const totalProducts = () => {
-     cart.reduce ((acumulador, productoActual) => acumulador + productoActual.Contador, 0);
-}
+    return cart.reduce((acumulador, productoActual) => acumulador + productoActual.Contador, 0);
+  }
 
 //Funcion para hacer el calculo del precio total en el carrito.
 const totalPrice = () => {
