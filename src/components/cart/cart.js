@@ -1,6 +1,8 @@
 import { useCartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom";
 import ItemCart from "../itemCart/itemCart";
+import BuyingForm from "../buyingForm/BuyingForm";
+import './Cart.css'
 
 const Cart = () => {
     const {cart, totalPrice } = useCartContext ();
@@ -17,6 +19,9 @@ const Cart = () => {
        {cart.map(product => <ItemCart key={product.id} product= {product} />)}
    
         <p>Total: {totalPrice ()} </p>
+        <div className="Formulario">
+        <BuyingForm ></BuyingForm>
+        </div>
     </div>
       )}
 }
