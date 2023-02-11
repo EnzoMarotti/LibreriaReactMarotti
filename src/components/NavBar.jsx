@@ -11,10 +11,8 @@ import { Link, NavLink } from 'react-router-dom';
 
         <nav className='navbar'>
             <NavLink to="/">Home</NavLink>
-            <a href="#SobreNosotros">Sobre nosotros</a>
            <NavLink to="/categoria/Cervezas">  Cervezas </NavLink>
            <NavLink to="/categoria/Gin">  Gin </NavLink>
-            <a href="#contactanos">Contáctanos</a> 
         </nav>
 
         <Link to="/cart"><Cart valor='0'></Cart>Carrito</Link>

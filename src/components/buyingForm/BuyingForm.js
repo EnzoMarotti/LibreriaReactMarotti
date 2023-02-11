@@ -38,9 +38,12 @@ function BuyingForm() {
 
 
   return (
+      
     <form onSubmit={handleSubmit} className="buying-form">
+    <h1>Termina tu compra</h1>
       <input
-        type="text"
+        type="text" 
+        required
         placeholder="Nombre"
         value={name}
         onChange={(event) => setName(event.target.value)}
@@ -48,6 +51,7 @@ function BuyingForm() {
       />
       <input
         type="text"
+        required
         placeholder="Apellido"
         value={lastName}
         onChange={(event) => setLastName(event.target.value)}
@@ -55,6 +59,7 @@ function BuyingForm() {
       />
       <input
         type="number"
+        required
         placeholder="Numero de telefono"
         value={phoneNumber}
         onChange={(event) => setPhoneNumber(event.target.value)}
@@ -62,6 +67,7 @@ function BuyingForm() {
       />
       <input
         type="email"
+        required
         placeholder="Email"
         value={email}
         onChange={(event) => setEmail(event.target.value)}
@@ -69,6 +75,7 @@ function BuyingForm() {
       />
       <select
         value={paymentMethod}
+        required
         onChange={(event) => setPaymentMethod(event.target.value)}
         className="form-input"
       >

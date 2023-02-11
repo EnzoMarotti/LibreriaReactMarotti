@@ -1,0 +1,51 @@
+.footer{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:1.5rem 7%;
+    border-bottom: var(--border);
+    color:white;
+    position:fixed;
+    margin-top: 1rem;
+    bottom: 0;
+    width: 100%;
+    height:fit-content;  
+}
+
+@media (max-width: 1780px) {
+    .footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+
+
+.footerInfo{
+    display: flex;
+}
+
+.info {
+    display: flex;
+    padding:1rem
+}
+
+.icons{
+    width: 20px;
+    height: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+    padding-right: 1rem;
+}
+
+.brand h2{
+    font-size: 2rem;
+    padding-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.brand h4{
+    font-size: 1rem;
+}

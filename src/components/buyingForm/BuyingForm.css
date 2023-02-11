@@ -1,18 +1,23 @@
 .buying-form {
-    padding:10px;
-    width:500px;
+    height: 100%;
+    padding:30px;
     background-color: rgba(14, 162, 199, 0.448);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 5%;
+    border-radius: 2%;
+  }
+
+  .buying-form h1 {
+    padding-bottom: 3rem;
+    color: rgb(60, 58, 58)
   }
   
   .form-input {
     margin: 10px 0;
     padding: 10px;
-    width: 300px;
+    width: 400px;
     font-size: 16px;
     border-radius: 5px;
     border: none;
@@ -26,4 +31,7 @@
     border-radius: 5px;
     border: none;
     font-size: 16px;
-    cursor: pointer;}
+    cursor: pointer;
+    width: 13rem;
+    
+  }

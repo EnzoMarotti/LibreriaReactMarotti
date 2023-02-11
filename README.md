@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+Proyecto React CoderHouse.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Le adjunto el Drive donde está subido el video de la navegación del sitio:
+https://drive.google.com/drive/folders/1pLSfrjXXkcfe_TOXG9tJ68znknHXXWEh?usp=sharing
 
-## Available Scripts
+El proyecto consiste en un E-commerce sobre bebidas alcoholicas, enfocada principalmente en distintas variedades de Cerveza, a la cual se le suman 3 estilos particulares de Gin.
 
-In the project directory, you can run:
+A grandes rasgos, la pagina cuenta con un Home en el cual se muestran todos los productos, seguido de 2 categorias correspondientes a "cervezas" y "gin".
 
-### `npm start`
+El navbar ademas presenta un cardwidget el cual al clickear, nos envía a la seccion de Cart para nosotros comenzar la compra.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Empezando desde la base, tenemos el archivo "item" el cual contiene toda la estructura de cada "card" del item.
 
-### `npm test`
+Luego, "itemList" tiene el proposito de armar las listas de productos mediante un map.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dentro de "ItemListContainer" tenemos gran parte de la Lógica del sitio. A grandes rasgos, genera una lista de productos dinámicos, llamando a los items que hay dentro de Firestore escuchando los cambios que ocurran en relación al parámetro de la "categoria", generando un filtro entre las mismas según el valor que tenga cada producto en "categorias".
 
-### `npm run build`
+Después tenemos un "ItemDetailContainer" e "itemDetail" que es el detalle de cada producto. En resumen trae la información de algun producto que seleccionemos. Esta pagina va a contener una imagen del producto, descripción, precio, stock, la posibilidad de elegir la cantidad de unidades de ese producto que querramos. Un botón de agregarlo al carrito y una vez agregado, la posibilidad de ir al carrito mediante un link de "terminar compra", para esto se utilizó un ternario.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+"ItemCart" tiene la estructura que va a componer cada item agregado al carrito sumado a un contexto "removeProduct" que nos permite eliminar algun elemento del carrito que ya no se desee.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+"Cart" presenta la lógica de que se muestra en el carrito. Tenemos 2 posibles opciones que dependen si hay elementos en el carrito o no. Si no hay elementos, nos dirá que el carrito está vacío y nos proporciona un link al "/home" par invitarnos a comprar.
+Cuando hay elementos dentro del carrito, se renderizan los elementos de "ItemCart", junto al precio final que proviene del CartContext.
+Sumado a esto tenemos un formulario que al completarlo envía la información a Firebase.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+En resumen, creo que se logró lo se buscaba en cuanto a la funcionalidad de la página, todo lo propuesto funciona sin errores. El código quizás se pueda optimizar todavia un poco más pero creo que está bastante bien logrado. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
